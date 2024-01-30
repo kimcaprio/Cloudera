@@ -1,0 +1,11 @@
+{
+  "id" : "ba5e8a8cd8614ffabac03286d295d7c7",
+  "name" : "kwkim-hive-catalog",
+  "type" : "catalog",
+  "properties" : {
+    "table_filters" : [ ],
+    "catalog_type" : "hive",
+    "default-database" : "default"
+  },
+  "custom_truststore" : false
+}

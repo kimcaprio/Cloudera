@@ -1,0 +1,18 @@
+{
+  "metadata" : {
+    "engine.hive.enabled" : "true",
+    "hive-conf-dir" : "/etc/hive/conf",
+    "connector" : "iceberg",
+    "schema.0.data-type" : "INT",
+    "catalog-database" : "default",
+    "format-version" : "2",
+    "catalog-type" : "hive",
+    "schema.1.name" : "pres",
+    "catalog-name" : "kwkim-hive-catalog",
+    "schema.0.name" : "temp",
+    "schema.1.data-type" : "INT"
+  },
+  "type" : "ssb",
+  "table_name" : "iceberg_v2_m1_s",
+  "transform_code_b64_encoded" : false
+}

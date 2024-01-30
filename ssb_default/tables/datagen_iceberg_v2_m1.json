@@ -1,0 +1,13 @@
+{
+  "metadata" : {
+    "rows-per-second" : "10",
+    "schema.1.name" : "pres",
+    "connector" : "datagen",
+    "schema.0.data-type" : "INT",
+    "schema.0.name" : "temp",
+    "schema.1.data-type" : "INT"
+  },
+  "type" : "ssb",
+  "table_name" : "datagen_iceberg_v2_m1",
+  "transform_code_b64_encoded" : false
+}

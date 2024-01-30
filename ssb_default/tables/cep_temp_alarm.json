@@ -1,0 +1,24 @@
+{
+  "metadata" : {
+    "schema.0.data-type" : "VARCHAR(2147483647)",
+    "schema.2.name" : "second_alarm",
+    "schema.4.metadata" : "timestamp",
+    "format" : "json",
+    "schema.1.name" : "first_alarm",
+    "schema.4.virtual" : "false",
+    "scan.startup.mode" : "group-offsets",
+    "schema.4.name" : "eventTimestamp",
+    "schema.1.data-type" : "INT",
+    "properties.bootstrap.servers" : "ccycloud-1.kwkim.root.comops.site:9092,ccycloud-2.kwkim.root.comops.site:9092,ccycloud-3.kwkim.root.comops.site:9092",
+    "schema.3.data-type" : "INT",
+    "connector" : "kafka",
+    "schema.2.data-type" : "INT",
+    "schema.3.name" : "last_alarm",
+    "topic" : "cep_temp_alarm",
+    "schema.4.data-type" : "TIMESTAMP(3) WITH LOCAL TIME ZONE",
+    "schema.0.name" : "job_id"
+  },
+  "type" : "ssb",
+  "table_name" : "cep_temp_alarm",
+  "transform_code_b64_encoded" : false
+}
