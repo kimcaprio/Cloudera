@@ -1,0 +1,22 @@
+{
+  "metadata" : {
+    "schema.0.data-type" : "VARCHAR(2147483647)",
+    "schema.2.name" : "avg_temp",
+    "format" : "json",
+    "schema.1.name" : "lot_id",
+    "schema.4.name" : "session_end",
+    "schema.1.data-type" : "VARCHAR(2147483647)",
+    "properties.bootstrap.servers" : "ccycloud-1.kwkim.root.comops.site:9092,ccycloud-2.kwkim.root.comops.site:9092,ccycloud-3.kwkim.root.comops.site:9092",
+    "schema.3.data-type" : "TIMESTAMP(3)",
+    "connector" : "kafka",
+    "schema.2.data-type" : "DOUBLE",
+    "schema.3.name" : "session_start",
+    "topic" : "average_temp",
+    "properties.group.id" : "cep_temp_alarm",
+    "schema.4.data-type" : "TIMESTAMP(3)",
+    "schema.0.name" : "dev_id"
+  },
+  "type" : "ssb",
+  "table_name" : "average_temp",
+  "transform_code_b64_encoded" : false
+}

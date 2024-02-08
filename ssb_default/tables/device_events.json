@@ -1,0 +1,37 @@
+{
+  "metadata" : {
+    "schema.watermark.0.strategy.expr" : "`eventTimestamp` - INTERVAL '3' SECOND",
+    "properties.auto.offset.reset" : "earliest",
+    "schema.0.data-type" : "VARCHAR(2147483647)",
+    "schema.2.name" : "temp",
+    "format" : "json",
+    "schema.3.virtual" : "false",
+    "schema.1.name" : "lot_id",
+    "scan.startup.mode" : "group-offsets",
+    "schema.1.data-type" : "VARCHAR(2147483647)",
+    "schema.3.data-type" : "TIMESTAMP(3) WITH LOCAL TIME ZONE",
+    "schema.3.metadata" : "timestamp",
+    "connector" : "kafka: Local Kafka",
+    "schema.2.data-type" : "INT",
+    "schema.3.name" : "eventTimestamp",
+    "properties.request.timeout.ms" : "120000",
+    "schema.watermark.0.rowtime" : "eventTimestamp",
+    "schema.watermark.0.strategy.data-type" : "TIMESTAMP(3)",
+    "properties.transaction.timeout.ms" : "900000",
+    "topic" : "device_events",
+    "properties.group.id" : "device_events",
+    "schema.0.name" : "dev_id",
+    "ssb.schema.text" : "{\n    \"doc\": \"Default schema - modify as necessary\",\n    \"namespace\": \"com.eventador.exampleschema\",\n    \"type\": \"record\",\n    \"name\": \"exampleSchema\",\n    \"fields\": [\n        {\n            \"type\": \"string\",\n            \"name\": \"dev_id\"\n        },\n        {\n            \"type\": \"string\",\n            \"name\": \"lot_id\"\n        },\n        {\n            \"type\": \"int\",\n            \"name\": \"temp\"\n        }\n    ]\n}",
+    "ssb.watermark_spec" : {
+      "timestamp_column" : "__ssb_kafka_timestamp"
+    },
+    "ssb.properties" : {
+      "auto.offset.reset" : "earliest",
+      "group.id" : "device_events"
+    }
+  },
+  "type" : "ssb",
+  "table_name" : "device_events",
+  "transform_code_b64_encoded" : false,
+  "transform_code" : ""
+}

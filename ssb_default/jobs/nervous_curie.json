@@ -1,7 +1,7 @@
 {
   "job_name" : "nervous_curie",
   "api_endpoints" : [ ],
-  "sql" : "select temp, pres \n  from iceberg_v2_m1_upsert /*+OPTIONS(\n    'streaming'='true', \n    'start-snapshot-id'='4892821381835746987'\n    )*/\n  \nSELECT temp, pres  FROM `iceberg_v2_m1_s` /*+OPTIONS('streaming'='true', 'monitor-interval'='1s','start-snapshot-id'='1900976546486244922')*/;\n\nSELECT count(1) FROM iceberg_v2_m1 /*+OPTIONS('streaming'='true', 'start-snapshot-id'='216066817364173232')*/ ;",
+  "sql" : "INSERT INTO average_temp\nSELECT \n    dev_id,\n    lot_id,\n    AVG(temp) AS avg_temp,\n    SESSION_START(eventTimestamp, INTERVAL '5' SECONDS) AS session_start,\n    SESSION_END(eventTimestamp, INTERVAL '5' SECONDS) AS session_end\nFROM device_events\nGROUP BY \n    dev_id, \n    lot_id,\n    SESSION(eventTimestamp, INTERVAL '5' SECONDS);",
   "mv_config" : {
     "name" : "nervous_curie",
     "retention" : 300,
